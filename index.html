@@ -1,264 +1,409 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
+<!DOCTYPE html>
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<meta name="description" content="A touchable jQuery lightbox plugin for desktop, mobile and tablet" />
-	<meta property="og:site_name" content="Swipebox" />
-	<meta property="og:url" content="http://brutaldesign.github.com/swipebox/" />
-	<meta property="og:image" content="http://swipebox.csag.co/images/swipe250.jpg" />
-	<meta property="og:type" content="article" />
-	<meta property="og:title" content="Swipebox | A touchable jQuery lightbox" />
-	<meta property="og:description" content="Swipebox is a jQuery lightbox plugin for desktop, mobile and tablet">
-	<meta itemprop="name" content="Swipebox | A touchable jQuery lightbox">
-	<meta itemprop="image" content="http://swipebox.csag.co/images/swipe250.jpg">
-	<meta itemprop="description" content="Swipebox is a jQuery lightbox plugin for desktop, mobile and tablet">
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Merriweather:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="demo/normalize.css">
-	<link rel="stylesheet" href="demo/bagpakk.min.css">
-	<link rel="stylesheet" href="demo/style.css">
-	<link rel="stylesheet" href="src/css/swipebox.css">
-	<title>Swipebox | A touchable jQuery lightbox</title>
-	<!-- share buttons -->
-	<script type="text/javascript">(function(doc, script) {
-		var js, 
-		fjs = doc.getElementsByTagName(script)[0],
-		add = function(url, id) {
-		if (doc.getElementById(id)) {return;}
-		js = doc.createElement(script);
-		js.src = url;
-		id && (js.id = id);
-		fjs.parentNode.insertBefore(js, fjs);
-		};add("//connect.facebook.net/en_US/all.js#xfbml=1", "facebook-jssdk");
-		add("//platform.twitter.com/widgets.js", "twitter-wjs");
-		}(document, "script"));
-	</script>
-	<!-- end share buttons -->
+<title>[박윤서 &#9825; 박유나] 결혼식에 초대합니다</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
+
+<meta property="og:site_name" content="telephone" />
+<meta property="og:title" content="[박윤서 &#9825; 박유나] 결혼식에 초대합니다." />
+<meta property="og:description" content=" 2020년04월25일 (일) 13:00  CN천년웨딩홀  5층 미엘르홀" />
+<meta property="og:image" content="https://user-images.githubusercontent.com/57864823/69450818-5da1c500-0da1-11ea-9891-c025d7d26245.png">
+<meta property="og:type" content="website" />
+<meta property="og:url" content="20200425.github.io/20200425/" />
+
+<link rel="stylesheet" href="src/css/swipebox.css">
+
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-text-size-adjust: 100%;
+}
+html,body {
+	height: 100%;
+}
+body {
+	background-color: #eee;
+}
+#wrap9 {
+   max-width: 500px;
+   margin: 0 auto;
+   background-color: #F6F6F6;
+   height: auto;
+}
+#wrap8 {
+   max-width: 500px;
+   margin: 0 auto;
+   background-color: #FFFFE9;
+   height: auto;
+}
+#wrap {
+   max-width: 500px;
+   margin: 0 auto;
+   background-color: #FFFFFF;
+   height: auto;
+}
+.img100 {
+	max-width: 100%;
+	width: auto !important;
+	width: 100%;
+}
+.img90 {
+	max-width: 90%;
+	width: auto !important;
+	width: 90%;
+}
+.img70 {
+	max-width: 70%;
+	width: auto !important;
+	width: 70%;
+}
+.img50 {
+	max-width: 50%;
+	width: auto !important;
+	width: 50%;
+}
+.img38 {
+	max-width: 38%;
+	width: auto !important;
+	width: 38%;
+}
+.img32 {
+	max-width: 32%;
+	width: auto !important;
+	width: 32%;
+}
+.img25 {
+	max-width: 25%;
+	width: auto !important;
+	width: 25%;
+}
+.img11 {
+	max-width: 11%;
+	width: auto !important;
+	width: 11%;
+	}
+.img8 {
+	padding-right: 6px;
+	padding-left: 6px;
+	padding-bottom: 6px;
+	vertical-align: middle;
+	width: 8%;
+}
+.img6 {
+	padding-right: 6px;
+	padding-left: 6px;
+	padding-bottom: 6px;
+	vertical-align: middle;
+	width: 6%;
+}
+.img45 {
+	padding-right: 6px;
+	padding-left: 6px;
+	padding-bottom: 6px;
+	vertical-align: middle;
+	width: 45%;
+}
+#autoplay, .slide_wrap {
+	position:relative;
+	width:100%;
+	overflow:hidden;
+}
+.content_wrap {
+	font-size: 12px;
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 6px;
+	margin: 0 15px;
+	color: #8d968c;
+	line-height: 20px;
+	font-family:"돋움";
+}
+.content_wrap h1 {
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 40px;
+	font-family:"돋움";
+	color: #000000;
+}
+.content_wrap h2 {
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 14px;
+	padding-bottom: 18px;
+	font-family:"돋움";
+	color: #000000;
+	line-height: 1.5em;
+}
+.content_wrap h1 img {
+	height: 40px;
+	vertical-align: middle;
+}
+.contact_wrap {
+	text-align: center;
+	padding-top: 15px;
+}
+.contact_wrap_Y {
+	text-align: center;
+	padding-top: 25px;
+}
+.contact_wrap_YNAME {
+	text-align: center;
+}
+.contact_wrap_YX {
+	text-align: center;
+	padding-top: 0px;
+}
+
+.contact_wrap_YS {
+	text-align: center;
+    vertical-align: middle;
+}
+.contact_wrap_YS h1 {
+	font-size: 13px;
+	text-align: left;
+	padding-top: 10px;
+	padding-left: 105px;
+	padding-bottom: 18px;
+	font-family:"돋움";
+	line-height: 1.5em;
+}
+.contact_wrap_YS h2 {
+	font-size: 13px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 18px;
+	font-family:"돋움";
+	line-height: 1.5em;
+}
+
+.contact_wrap_YY {
+	padding-top: 30px;
+	width: 60%;
+    text-align: center;
+}
+.contact_wrap a {
+	font-size: 20px;
+	color: #2f302c;
+	font-weight: bold;
+	text-decoration: none;
+	display: inline-block;
+	padding: 10px;
+	min-width: 20px;
+	border-radius: 5px;
+}
+.contact_wrap a.bg1 {
+	background-color: #EEEEEE;
+}
+.contact_wrap a.bg2 {
+	background-color: #9bddbe;
+}
+.contact_wrap a.bg3 {
+	background-color: #ccf2cb;
+}
+.contact_wrap img {
+	height: 15px;
+	padding-right: 5px;
+	vertical-align: middle;
+	position: relative;
+	top: -2px;
+}
+.text_wrap {
+	font-size: 18px;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 35px;
+	line-height: 1.7em;
+	font-family:"돋움";
+	<!-- color: #8d968c; -->
+}
+.text_wrap_ww {
+	font-size: 14px;
+	padding-top: 40px;
+	text-align: center;
+	font-family:"돋움";
+	color: #8d968c;
+	line-height: 1.5em;
+}
+.text_wrap_name {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 19px;
+	text-align: center;
+	line-height: 2em;
+	vertical-align: middle;
+	font-family:"돋움";
+	<!-- color: #8d968c; -->
+}
+.text_wrap_name h3 {
+	font-size: 18px;
+}
+
+.text_wrap_name h4 {
+	padding-left: 0px;
+	font-family:"돋움";
+}
+.copy {
+	font-size:12px;
+	color:#888;
+	text-align:center;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+.slick-prev,.slick-next {
+	display:none !important;
+}
+</style>
 </head>
 <body>
-	<div id="fb-root"></div>
-	<div id="fork-this">
-		<a href="https://github.com/brutaldesign/swipebox"></a>
+	<div id="wrap9">
+	<!-- title -->
+	<div class="contact_wrap_Y">
+		    <img src="https://user-images.githubusercontent.com/57864823/69054911-f35eec80-0a4f-11ea-91ef-6c6b9398652b.png"; class = "img100" />
+	</div>
+	<div class="contact_wrap_Y">
+			<img src="https://user-images.githubusercontent.com/57864823/69450818-5da1c500-0da1-11ea-9891-c025d7d26245.png"; class = "img100"/ >
+	</div>
+	  <div class="text_wrap_ww" >
+         " 예쁜 예감이 들었다<br />
+         우리는 언제나<br />
+         손을 잡고 있게 될 것이다. "
+   </div>
+	<div class="content_wrap">
+			<h1> </br>2020년 4월 25일 토요일 오후1시 </br></br>
+			계산 CN천년웨딩홀 5층 미엘르홀</h1>
+	</div>
+	</div>
+	<div id="wrap">
+
+</br>
+	<div class="contact_wrap_Y">
+	<br>
+		<img src="https://user-images.githubusercontent.com/57864823/69055464-2950a080-0a51-11ea-9024-7b9a4be01188.png"; class = "img45"/ >
+	</div>
+	<!-- <div class="text_wrap">
+			예쁜 예감이 들었다<br />
+			우리는 언제나<br />
+			손을 잡고 있게 될 것이다.
+		</div> -->
+		</br>
+	<div class="text_wrap" >
+			" 각자 서로 다른 길을 걸어온 저희가 <br />
+			이제 부부의 연으로 한 길을 걸어가고자 합니다.<br />
+			항상 처음을 생각하며, 서로 아껴주고<br />
+			사랑하며 살겠습니다.<br />
+			부디 참석해 주시어 저희의 약속을<br />
+			따뜻한 격려로 축복해 주시기 바랍니다."</br></br>
+	</div>
+			<div class="contact_wrap_YX">
+		    <img src="https://user-images.githubusercontent.com/57864823/69451064-ddc82a80-0da1-11ea-890b-2a932acd6032.png"; class = "img100" />
+	</div>
+</br>
+
+	<div class="contact_wrap_Y">
+			<img src="https://user-images.githubusercontent.com/57864823/69471728-ee01f900-0de5-11ea-8326-d3eb689624bd.png"; class = "img38" style = "padding-right: 25x"/ >
+			<img src="https://user-images.githubusercontent.com/57864823/69471729-ee9a8f80-0de5-11ea-852e-76f541827ce1.png"; class = "img38"  style = "padding-left: 25px"/ >
 	</div>
 
-	<header class="container">
-		<div class="wrap small-width">
-			<div class="lead text-center">
-				<h1>Swipebox.</h1>
-				<p class="tagline">A touchable jQuery lightbox</p>
-			</div>
-			
-			<div id="share" class="text-center">
-				<div id="twitter">
-					<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://brutaldesign.github.com/swipebox" data-text="Swipebox | A touchable jQuery lightbox" data-via="brutaldesign">Tweet</a>
-				</div>
-				<div id="fb">
-					<div class="fb-like" data-href="http://brutaldesign.github.com/swipebox/" data-send="false" data-layout="button_count" data-width="110" data-show-faces="false" data-colorscheme="light" data-action="like"></div>
-				</div>
-			</div>
-			<ul>
-				<li><a href="#what">What is Swipebox ?</a>
-					<ul>
-						<li><a href="#features">Main Features</a></li>
-						<li><a href="#compatibility">Compatibility</a></li>
-					</ul>
-				</li>
-				<li><a href="#try">Try it</a></li>
-				<li><a href="#basic">Basic Usage</a></li>
-				<li><a href="#advanced">Advanced</a>
-					<ul>
-						<li><a href="#rel">Gallery</a></li>
-						<li><a href="#video">Video support</a></li>
-						<li><a href="#dynamic">Load slides dynamically</a></li>
-						<li><a href="#open">Check open state</a></li>
-						<li><a href="#options">Options</a></li>
-					</ul>
-				</li>
-				<li><a href="#download">Download</a></li>
-			</ul>
-		</div>
-	</header>
+<div class="contact_wrap_YNAME">
+		<a href="tel:01075704438"><img src="https://user-images.githubusercontent.com/57864823/69435510-07be2480-0d83-11ea-81b7-ea9343b748b4.png" class = "img8"   alt="신랑전화"></a>
+		<a href="sms:01075704438"><img src="https://user-images.githubusercontent.com/57864823/69435844-a9457600-0d83-11ea-92d3-6debb37da0e6.png" class = "img8" alt="신랑문자" style = "padding-right: 105px"></a>
+			<a href="tel:01041997428"><img src="https://user-images.githubusercontent.com/57864823/69435510-07be2480-0d83-11ea-81b7-ea9343b748b4.png" class = "img8" alt="신부전화"></a>
+		<a href="sms:01041997428"><img src="https://user-images.githubusercontent.com/57864823/69435844-a9457600-0d83-11ea-92d3-6debb37da0e6.png" class = "img8" alt="신부문자"></a></br></br>
+	</div>
 
-	<section id="exemple" class="container">
-		<div class="wrap small-width">
-			<div id="try"></div>
-			<ul id="box-container">
-				<li class="box">
-					<a href="http://swipebox.csag.co/images/image-1.jpg" class="swipebox" title="Fog">
-						<img src="http://swipebox.csag.co/images/image-1.jpg" alt="image">
-					</a>
-				</li>
-				<li class="box">
-					<a href="http://swipebox.csag.co/images/image-2.jpg" class="swipebox" title="City">
-						<img src="http://swipebox.csag.co/images/image-2.jpg" alt="image">
-					</a>
-				</li>
-				<li class="box">
-					<a href="http://swipebox.csag.co/images/image-3.jpg" class="swipebox" title="Street">
-						<img src="http://swipebox.csag.co/images/image-3.jpg" alt="image">
-					</a>
-				</li>
-				<li class="box">
-					<a href="http://swipebox.csag.co/images/image-4.jpg" class="swipebox" title="Mustache Guy">
-						<img src="http://swipebox.csag.co/images/image-4.jpg" alt="image">
-					</a>
-				</li>
-			</ul>
-		</div>
-	</section>
+	<div class="contact_wrap_Y">
+			<img src="https://user-images.githubusercontent.com/57864823/69472420-64562980-0ded-11ea-9bb8-9a40ac61ed6a.png"; class = "img38" style = "padding-right: 25x"/ >
+			<img src="https://user-images.githubusercontent.com/57864823/69472421-64eec000-0ded-11ea-9fe4-c705159392e5.png"; class = "img38"  style = "padding-left: 25px"/ >
+	</div>
+<div class="contact_wrap_YNAME">
+	<a href="tel:01063135379"><img src="https://user-images.githubusercontent.com/57864823/69435510-07be2480-0d83-11ea-81b7-ea9343b748b4.png" class = "img8"  alt="신랑아버지전화" style = "padding-top: 10px" ></a>
+		<a href="sms:01063135379"><img src="https://user-images.githubusercontent.com/57864823/69435844-a9457600-0d83-11ea-92d3-6debb37da0e6.png" class = "img8" alt="신랑아버지문자" style = "padding-right: 105px; padding-top: 10px "></a>
+			<a href="tel:01087057436"><img src="https://user-images.githubusercontent.com/57864823/69435510-07be2480-0d83-11ea-81b7-ea9343b748b4.png" class = "img8" alt="신부아버지전화" style = "padding-top: 10px" ></a>
+		<a href="sms:01087057436"><img src="https://user-images.githubusercontent.com/57864823/69435844-a9457600-0d83-11ea-92d3-6debb37da0e6.png" class = "img8" alt="신부아버지문자" style = "padding-top: 10px" ></a>
+	</div>
 
-	<section  id="presentation" class="container">
-		<div class="wrap small-width">
-			<div id="what"></div>
-			<h2>What is Swipebox ?</h2>
-			<p>Swipebox is a jQuery "lightbox" plugin for desktop, mobile and tablet.</p>		
-			
-			<div id="features"></div>
-			<h3>Main Features</h3>
-			<ol>
-				<li>Swipe gestures for mobile</li>
-				<li>Keyboard Navigation for desktop</li>
-				<li>CSS transitions with jQuery fallback</li>
-				<li>Retina support for UI icons</li>
-				<li>Easy CSS customization</li>
-			</ol>
-			
-			<div id="compatibility"></div>
-			<h3>Compatibility</h3>
-			<p>Chrome, Safari, Firefox, Opera, IE9+, IOS4+, Android, windows phone.</p>
-		</div>
-	</section>
+	<div class="contact_wrap_Y">
+			<img src="https://user-images.githubusercontent.com/57864823/69472496-68cf1200-0dee-11ea-96f2-b3382aba519a.png"; class = "img38" style = "padding-right: 25x"/ >
+			<img src="https://user-images.githubusercontent.com/57864823/69472497-68cf1200-0dee-11ea-9bba-85a38b26fe8d.png"; class = "img38"  style = "padding-left: 25px"/ >
+	</div>
+<div class="contact_wrap_YNAME">
+<a href="tel:01039344438"><img src="https://user-images.githubusercontent.com/57864823/69435510-07be2480-0d83-11ea-81b7-ea9343b748b4.png" class = "img8"  alt="신랑어머니전화"></a>
+		<a href="sms:01039344438"><img src="https://user-images.githubusercontent.com/57864823/69435844-a9457600-0d83-11ea-92d3-6debb37da0e6.png" class = "img8" alt="신랑어머니문자" style = "padding-right: 105px"></a>
+			<a href="tel:01031915933"><img src="https://user-images.githubusercontent.com/57864823/69435510-07be2480-0d83-11ea-81b7-ea9343b748b4.png" class = "img8" alt="신부어머니전화"></a>
+		<a href="sms:01031915933"><img src="https://user-images.githubusercontent.com/57864823/69435844-a9457600-0d83-11ea-92d3-6debb37da0e6.png" class = "img8" alt="신부어머니문자"></a></br></br></br></br></br>
+</div>
+<div class ="box">
+<div id="wrap8">
+	<!--웨딩갤러리-->
+	<div class="contact_wrap_Y">
+		<img src="https://user-images.githubusercontent.com/57864823/69055470-29e93700-0a51-11ea-9f92-cd23b4fb330b.png"; class = "img45"/ > 
+	
+	</div>
 
-	<section id="usage" class="container">
-		<div class="wrap small-width">
-			<div id="basic"></div>
-			<h2>Basic Usage</h2>
-			<h3>Javascript</h3>
-			
-			<p>Include jquery and the swipebox script in your <code>head</code> tags or right before your <code>body</code> closing tag.</p>
-			<pre>&lt;script src="lib/jquery-2.0.3.js"&gt;&lt;/script&gt;
-&lt;script src="src/js/jquery.swipebox.js"&gt;&lt;/script&gt;</pre>
+    <!--main이미지는 고화질주소, 크롭주소 같은걸루 사이즈는 가로 640 세로는 상관없음-->
+	<div class="contact_wrap_Y">
+	 <a href="https://user-images.githubusercontent.com/57864823/69483112-a1123700-0e66-11ea-8348-da813346dab6.jpg" class="swipebox" title="내 캡션" ><img src="https://user-images.githubusercontent.com/57864823/69452375-db1b0480-0da4-11ea-99b5-666f823fd76d.png"; class = "img100" /></a><a href="https://user-images.githubusercontent.com/57864823/69452134-58924500-0da4-11ea-8b3b-8e62f40c2d12.png" class="swipebox" title = "a"><img src="https://user-images.githubusercontent.com/57864823/69452822-f8040780-0da5-11ea-86ea-5df40c5f6247.png" ; class = "img32"/></a>&nbsp;<a href="https://user-images.githubusercontent.com/57864823/69451273-4dd6b080-0da2-11ea-9f09-a59fa52919cc.png" class="swipebox" title = "a"><img src="https://user-images.githubusercontent.com/57864823/69453313-056dc180-0da7-11ea-8979-9652d86630a4.png" ; class = "img32"/></a>
+	    <a href="https://user-images.githubusercontent.com/57864823/69453606-9c3a7e00-0da7-11ea-8d95-6801ddeb7e72.png" class="swipebox" title = "a"><img src="https://user-images.githubusercontent.com/57864823/69453607-9cd31480-0da7-11ea-884c-4dfe1ab303f8.png"; class = "img32" /></a></br>
+		<a href="https://user-images.githubusercontent.com/57864823/69472798-ed6f5f80-0df1-11ea-9826-6ff8bdfb9b39.png" class="swipebox" title = "a"><img src="https://user-images.githubusercontent.com/57864823/69472797-ed6f5f80-0df1-11ea-93f5-c25853edcea7.png"; class = "img32" /></a>
+		<a href="https://user-images.githubusercontent.com/57864823/69473548-121b0580-0df9-11ea-8b43-75fa9ee60e87.png" class="swipebox" title = "a"><img src="https://user-images.githubusercontent.com/57864823/69473549-121b0580-0df9-11ea-8056-0c231bb4f3c9.png"; class = "img32" /></a>
+		<a href="https://user-images.githubusercontent.com/57864823/69483125-d159d580-0e66-11ea-940c-12e45b3b6b7d.jpg" class="swipebox" title = "a"><img src="https://user-images.githubusercontent.com/57864823/69454001-89747900-0da8-11ea-9c78-6b6400689d2c.png"; class = "img32" /></a>
+	</div>
+	</div>
+	</div>
+	<div id="wrap9">
+		<div class="contact_wrap_Y">
+	<br>
+		<img src="https://user-images.githubusercontent.com/57864823/69154861-21adfc00-0b24-11ea-87dc-1549727d220e.png"; class = "img45"/ >
+	</div>
 
-			<h3>CSS</h3>
-			<p>Include the swipebox CSS style in your <code>head</code> tags.</p>
-<pre>&lt;link rel="stylesheet" href="src/css/swipebox.css"&gt;</pre>
-		<h3>HTML</h3>
-		<p>Use a specific class for your links and use the title attribute as caption.</p>
-<pre>&lt;a href="big/image.jpg" class="swipebox" title="My Caption"&gt;
-&lt;img src="small/image.jpg" alt="image"&gt;
-&lt;/a></pre>
-		<h3>Fire the plugin</h3>
-		<p>Bind the swipebox behaviour on every link with the "swipebox" class.</p>
-<pre>&lt;script type="text/javascript"&gt;
-;( function( $ ) {
+<!-- 지도 -->
 
-	$( '.swipebox' ).swipebox();
+<table cellpadding="0" cellspacing="0" width="100%"> <tr> <td style="border:1px solid #cecece;"><a href="https://v4.map.naver.com/?__pinOnly=false&query=&searchCoord=&menu=location&tab=1&lng=ffd9fd29c51313fb1aa991865ee20c67&__fromRestorer=true&mapMode=0&mpx=c4948bb203959cf10acbb00a3f517c0ee44551b8d6b64e7110442bbba4dd3ad7c0ef24c4d5594ac8b2bfadb12877d870&pinId=12813804&pinType=site&lat=4a0cebacd90ea93d29779139b34dc959&dlevel=11&enc=b64" target="_blank">
+<img src="http://prt.map.naver.com/mashupmap/print?key=p1574302761574_-1617039767" width="100%" height="340" alt="지도 크게 보기" title="지도 크게 보기" border="0" style="vertical-align:too;"/></a></td> </tr> <tr> <td> <table cellpadding="0" cellspacing="0" width="100%"> <tr> <td height="30" bgcolor="#f9f9f9" align="left" style="padding-left:9px; border-left:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="font-family: tahoma; font-size: 11px; color:#666;">2019.11.21</span>&nbsp;<span style="font-size: 11px; color:#e5e5e5;">|</span>&nbsp;<a style="font-family: dotum,sans-serif; font-size: 11px; color:#666; text-decoration: none; letter-spacing: -1px;" href="https://v4.map.naver.com/?__pinOnly=false&query=&searchCoord=&menu=location&tab=1&lng=ffd9fd29c51313fb1aa991865ee20c67&__fromRestorer=true&mapMode=0&mpx=c4948bb203959cf10acbb00a3f517c0ee44551b8d6b64e7110442bbba4dd3ad7c0ef24c4d5594ac8b2bfadb12877d870&pinId=12813804&pinType=site&lat=4a0cebacd90ea93d29779139b34dc959&dlevel=11&enc=b64" target="_blank">지도 크게 보기</a> </td> <td width="5" bgcolor="#f9f9f9" align="right" style="text-align:right; padding-right:9px; border-right:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="float:right;"><span style="font-size:9px; font-family:Verdana, sans-serif; color:#444;">&copy;&nbsp;</span>&nbsp;<a style="font-family:tahoma; font-size:9px; font-weight:bold; color:#2db400; text-decoration:none;" href="https://www.navercorp.com" target="_blank">NAVER Corp.</a></span> </td> </tr> </table> </td> </tr> </table>
 
-} )( jQuery );
-&lt;/script&gt;
-</pre>
-		</div>
-	</section>
-	<section id="advanced-usage" class="container">
-		<div class="wrap small-width">
-			<div id="advanced"></div>
-			<h2>Advanced</h2>
-			
-			<div id="rel"></div>
-			<h3>Gallery</h3>
-			<p>You can add a <code>rel</code> attribute to your links to seperate your galleries.</p>
-			<pre>
-<span>&lt;!-- Gallery 1 --&gt;</span>
-&lt;a rel="gallery-1" href="big/image1.jpg" class="swipebox"&gt;
-	&lt;img src="small/image1.jpg" alt="image"&gt;
-&lt;/a&gt;
-&lt;a rel="gallery-1" href="big/image2.jpg" class="swipebox"&gt;
-	&lt;img src="small/image2.jpg" alt="image"&gt;
-&lt;/a&gt;
-<span>&lt;!-- Gallery 2 --&gt;</span>
-&lt;a rel="gallery-2" href="big/image3.jpg" class="swipebox"&gt;
-	&lt;img src="small/image3.jpg" alt="image"&gt;
-&lt;/a&gt;
-&lt;a rel="gallery-2" href="big/image4.jpg" class="swipebox"&gt;
-	&lt;img src="small/image4.jpg" alt="image"&gt;
-&lt;/a&gt;</pre>
-			
-			<div id="video"></div>
-			<h3>Video support</h3>
-			<p>Simply paste a youtube or vimeo video URL in your href attribute. The script will automatically check if it's a youtube or vimeo URL and open the video in the swipebox.</p>
-			<p>
-				<a class="swipebox-video" href="http://vimeo.com/29193046">My Video</a>
-			</p>
-			<pre>&lt;a class="swipebox-video" rel="vimeo" href="http://vimeo.com/29193046"&gt;My Videos&lt;/a&gt;</pre>
-			
-			<div id="dynamic"></div>
-			<h3>Load slides dynamically</h3>
-			<p>You can set your gallery dynamically by passing an array object to the swipebox.</p>
-			<p><a id="gallery" href="#">View gallery</a></p>
-			
-			<pre>
-$( '#gallery' ).click( function( e ) {
-	e.preventDefault();
-	$.swipebox( [
-		{ href:'big/image1.jpg', title:'My Caption' }, 
-		{ href:'big/image2.jpg', title:'My Second Caption' }
-	] );
-} );</pre>
-				<div id="open"></div>
-				<h3>Check open state</h3>
-<pre>if ( $.swipebox.isOpen ) {
-	// do stuff
-}</pre>
-			
-				<div id="options"></div>
-				<h3>Options</h3>
-<pre>
-&lt;script type="text/javascript"&gt;
-;( function( $ ) {
+	<div class="content_wrap">
+	<h2>CN천년웨딩홀(계산점) 5층 미엘르홀</br>
+	</br>인천광역시 계양구 경명대로 1108(신)</br>인천광역시 계양구 계산동 348-4(구)</h2>
+	</div>
+	
+<div class="contact_wrap_YS"  style = "background:rgba(147,147,147,0.5);">
+ <img src="https://user-images.githubusercontent.com/57864823/69440847-e7936300-0d8c-11ea-8403-921229782ad2.png" class = "img32"  style = "vertical-align: middle";/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://map.naver.com/v5/directions/-/14107523.721386243,4515041.481863681,CN%EC%B2%9C%EB%85%84%EB%B6%80%ED%8E%98%EC%9B%A8%EB%94%A9%ED%99%80%20%EC%9D%B8%EC%B2%9C%EC%A0%90,12813804,PLACE_POI/-/transit?c=14107057.9332451,4515041.4818637,15,0,0,0,dh"><img src="https://user-images.githubusercontent.com/57864823/69437360-84063700-0d86-11ea-9ab0-859dda02929b.png" class = "img11" style = "vertical-align: middle"/></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:0325460070"><img src="https://user-images.githubusercontent.com/57864823/69437361-849ecd80-0d86-11ea-9dbc-4b5b007be63d.png" ; class = "img11" style = "vertical-align: middle"/></a>
+	</div>
+<br/>
 
-	$( '.swipebox' ).swipebox( {
-		useCSS : true, <span>// false will force the use of jQuery for animations</span>
-		useSVG : true, <span>// false to force the use of png for buttons</span>
-		initialIndexOnArray : 0, <span>// which image index to init when a array is passed</span>
-		hideCloseButtonOnMobile : false, <span>// true will hide the close button on mobile devices</span>
-		removeBarsOnMobile : true, <span>// false will show top bar on mobile devices</span>
-		hideBarsDelay : 3000, <span>// delay before hiding bars on desktop</span>
-		videoMaxWidth : 1140, <span>// videos max width</span>
-		beforeOpen: function() {}, <span>// called before opening</span>
-		afterOpen: null, <span>// called after opening</span>
-		afterClose: function() {}, <span>// called after closing</span>
-		loopAtEnd: false <span>// true will return to the first image after the last image is reached</span>
-	} );
+<br/>
+<div class="contact_wrap_YS">
+ <img src="https://user-images.githubusercontent.com/57864823/69445870-925c4f00-0d96-11ea-8c6d-4a6f6790b04d.png" class = "img45"  style = "vertical-align: middle";/>
+ <img src="https://user-images.githubusercontent.com/57864823/69473430-b69c4800-0df7-11ea-8a67-e44c9b9dcf5d.png" class = "img70"  style = "vertical-align: middle";/>
+<!-- <h1>[인천1호선] 계산역 1번출구에서 도보 1분거리</h1> -->
+</div>
+<div class="contact_wrap_YS">
+ <img src="https://user-images.githubusercontent.com/57864823/69447136-30e9af80-0d99-11ea-996e-24c14fdac510.png" class = "img45"  style = "vertical-align: middle";/>
+<img src="https://user-images.githubusercontent.com/57864823/69473511-6d98c380-0df8-11ea-80fd-07f0210d44ff.png" class = "img70"  style = "vertical-align: middle";/>
+<img src="https://user-images.githubusercontent.com/57864823/69447990-fd0f8980-0d9a-11ea-82fb-57e6d0f10009.png" class = "img45"  style = "vertical-align: middle";/>
+<br/><h2>2시간 무료주차</h2>
 
-} )( jQuery );
-&lt;/script&gt;</pre>
-		</div>
-	</section>
+</div>
 
-	<section id="action" class="container text-center">
-		<div class="wrap small-width">
-			<div id="download"></div>
-			<p><a class="button-big" href="https://github.com/brutaldesign/swipebox/archive/master.zip">Download</a> <a class="button-big" href="https://github.com/brutaldesign/swipebox">View Source</a></p>
-		</div>
-	</section>
-
-	<footer class="text-center">
-		<div class="wrap small-width">
-			<a href="http://csag.co" target="_blank">csag.co</a> | <a href="http://wpwlf.co" target="_blank">wpwlf.co</a>
-		</div>
-	</footer>
-	<script src="lib/ios-orientationchange-fix.js"></script>
-	<script src="lib/jquery-2.1.0.min.js"></script>
+<script src="lib/jquery-2.1.0.min.js"></script>
 	<script src="src/js/jquery.swipebox.js"></script>
 	<script type="text/javascript">
 	$( document ).ready(function() {
-
 			/* Basic Gallery */
 			$( '.swipebox' ).swipebox();
 			
 			/* Video */
 			$( '.swipebox-video' ).swipebox();
-
 			/* Dynamic Gallery */
 			$( '#gallery' ).click( function( e ) {
 				e.preventDefault();
@@ -267,9 +412,7 @@ $( '#gallery' ).click( function( e ) {
 					{ href : 'http://swipebox.csag.co/images/image-2.jpg', title : 'My Second Caption' }
 				] );
 			} );
-
       });
 	</script>
 </body>
-	
 </html>
